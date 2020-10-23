@@ -31,7 +31,11 @@ namespace ChallengeSets
 
         public bool IsNumberOdd(int num)
         {
-            throw new NotImplementedException();
+            if (num%2==1||num%2==-1)
+            {
+                return true;
+            }
+            return false;
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
