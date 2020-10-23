@@ -36,7 +36,7 @@ namespace ChallengeSets
 
         public long Multiply(long factor1, long factor2)
         {
-            throw new NotImplementedException();
+            return factor1 * factor2;
         }
 
         public string GetGreeting(string nameOfPerson)
