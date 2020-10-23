@@ -20,7 +20,18 @@ namespace ChallengeSets
 
         public int GetSmallestNumber(int number1, int number2)
         {
-            throw new NotImplementedException();
+            if (number1<number2)
+            {
+                return number1;
+            }
+            else if(number1>number2)
+            {
+                return number2;
+            }
+            else
+            {
+                return number1;
+            }
         }
 
         public long Multiply(long factor1, long factor2)
