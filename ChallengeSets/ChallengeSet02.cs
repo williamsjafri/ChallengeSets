@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Markup;
 
 namespace ChallengeSets
@@ -40,7 +41,11 @@ namespace ChallengeSets
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers.Length())
+            {
+                return numbers.Max() + numbers.Min();
+            }
+            return 0;
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
