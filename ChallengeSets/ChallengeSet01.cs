@@ -45,7 +45,7 @@ namespace ChallengeSets
             {
                 return $"Hello!";
             }
-            return $"Hello, {nameOfPerso}!";
+            return $"Hello, {nameOfPerson}!";
             
         }
 
