@@ -61,7 +61,16 @@ namespace ChallengeSets
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            if (numbers==null)
+            {
+                return 0;
+            }
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sum += numbers[i];
+            }    
+            return sum;
         }
 
         public int SumEvens(int[] numbers)
