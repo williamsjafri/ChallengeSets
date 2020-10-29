@@ -41,11 +41,11 @@ namespace ChallengeSets
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            if (numbers.Length())
+            if (numbers == null ||numbers.Count() == 0)
             {
-                return numbers.Max() + numbers.Min();
+                return 0;
             }
-            return 0;
+            return numbers.Max() + numbers.Min();
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
