@@ -75,7 +75,25 @@ namespace ChallengeSets
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            int sum = 0;
+            if (numbers == null)
+            {
+                return 0;
+            }
+            else
+            {
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    if (numbers[i] % 2 == 0)
+                    {
+                        sum += numbers[i];
+
+                    }
+
+                }
+            }
+            return sum;
+           
         }
 
         public bool IsSumOdd(List<int> numbers)
