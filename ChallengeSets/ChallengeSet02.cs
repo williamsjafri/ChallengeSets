@@ -9,7 +9,11 @@ namespace ChallengeSets
     {
         public bool CharacterIsALetter(char c)
         {
-            return true ;
+
+            if (char.IsLetter(c))
+            {
+                return true;
+            } return false;
         }
 
         public bool CountOfElementsIsEven(string[] vals)
@@ -118,7 +122,10 @@ namespace ChallengeSets
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            if (number<0)
+            {
+                return 0;
+            } return number / 2;
         }
     }
 }
