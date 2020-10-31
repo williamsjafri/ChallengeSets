@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ChallengeSets
 {
@@ -19,7 +20,23 @@ namespace ChallengeSets
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers==null)
+            {
+                return false;
+            }
+            List<int> oddNumbers=new List<int>();
+            foreach (var item in numbers )
+            {
+                if (item%2!=0)
+                {
+                    oddNumbers.Add(item);
+                }
+            }
+            if (oddNumbers.Sum()%2!=0)
+            {
+                return true;
+            }
+            return false;
         }
 
         public bool PasswordContainsUpperLowerAndNumber(string password)
