@@ -89,7 +89,16 @@ namespace ChallengeSets
         }
         public int[] GetOddsBelow100()
         {
-            throw new NotImplementedException();
+            var odds =new  List<int>();
+
+            for (int i = 0; i < 100; i++)
+            {
+                if (i%2==1)
+                {
+                    odds.Add(i);
+                }
+            }return odds.ToArray();
+
         }
 
         public void ChangeAllElementsToUppercase(string[] words)
