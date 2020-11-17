@@ -5,7 +5,20 @@ namespace ChallengeSets
     {
         public int AddEvenSubtractOdd(int[] numbers)
         {
-            throw new NotImplementedException();
+            int odd=0;
+            int even = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i]%2==0)
+                {
+                    even += numbers[i];
+                }
+                else
+                {
+                    odd += numbers[i];
+                }
+            }
+            return even - odd;
         }
 
         public int GetLengthOfShortestString(string str1, string str2, string str3, string str4)
