@@ -43,7 +43,13 @@ namespace ChallengeSets
 
         public bool CouldFormTriangle(int sideLength1, int sideLength2, int sideLength3)
         {
-            throw new NotImplementedException();
+            int sum1 = sideLength1 + sideLength2;
+            int sum2 = sideLength1 + sideLength3;
+            int sum3 = sideLength2 + sideLength3;
+            if (sum1>sideLength3 && sum2>sideLength2 && sum3>sideLength1 )
+            {
+                return true ;
+            }return false;
         }
 
         public bool IsStringANumber(string input)
