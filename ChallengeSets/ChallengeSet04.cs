@@ -54,7 +54,9 @@ namespace ChallengeSets
 
         public bool IsStringANumber(string input)
         {
-            throw new NotImplementedException();
+            var isNumber = double.TryParse(input, out double number);
+            return isNumber;
+           
         }
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
