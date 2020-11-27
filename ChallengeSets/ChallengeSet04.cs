@@ -61,7 +61,19 @@ namespace ChallengeSets
 
         public bool MajorityOfElementsInArrayAreNull(object[] objs)
         {
-            throw new NotImplementedException();
+            int numberOfNull = 0;
+            for (int i = 0; i < objs.Length; i++)
+            {
+             if (objs[i] == null)
+              {
+                    numberOfNull ++;
+              }
+            }
+            if (numberOfNull>objs.Length/2)
+            {
+                return true;
+            }
+            return false;
         }
 
         public double AverageEvens(int[] numbers)
