@@ -78,12 +78,44 @@ namespace ChallengeSets
 
         public double AverageEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers==null||numbers.Length ==0)
+            {
+                return 0;
+            }
+            double evens = 0;
+            double count = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                if (numbers[i] % 2==0)
+                {
+                    evens += numbers[i];
+                    count++;
+                }
+                else
+                {
+                    evens += 0;
+                    count += 0;
+                }
+            }
+            if (count == 0)
+            {
+                return 0;
+            }
+            return evens / count;
         }
 
         public int Factorial(int number)
         {
-            throw new NotImplementedException();
+            int results= 1;
+            if (number==0)
+            {
+                return 1;
+            }
+            while(number>1)
+            {
+                results *= number;
+                number -= 1;
+            }return results;
         }
     }
 }
