@@ -111,11 +111,16 @@ namespace ChallengeSets
             {
                 return 1;
             }
+            else if (number<0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             while(number>1)
             {
                 results *= number;
                 number -= 1;
             }return results;
+            
         }
     }
 }
