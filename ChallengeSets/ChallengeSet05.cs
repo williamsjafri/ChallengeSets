@@ -75,17 +75,81 @@ namespace ChallengeSets
 
         public string TurnWordsIntoSentence(string[] words)
         {
-            throw new NotImplementedException();
+           //string sentence = "" ;
+           // if (words==null || words.Length==0)
+           // {
+           //     return "";
+           // }
+           // for (int i = 0; i < words.Length; i++)
+           // {
+           //     if (words[i].Length == 0)
+           //     {
+           //         sentence += "";
+           //     }
+           //     if (i==words.Length-1)
+           //     {
+           //         words[i] += ". ";
+           //     }
+           //     sentence+=$"{words[i]} ";
+           // }return sentence;
+
+            
+            string str = "";
+            if (words == null || words.Length < 1)
+                return str;
+            foreach (var word in words)
+            {
+                if (string.IsNullOrWhiteSpace(word))
+                    continue;
+                else
+                    str += word.Trim() + " ";
+            }
+            if (str == "")
+            {
+                return "";
+            }
+            return str.TrimEnd() + ".";
+
+
+
+
+
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
         {
-            throw new NotImplementedException();
+            var list = new List<double>();
+            if (elements==null||elements.Count==0)
+            {
+                return new double[0] ;
+            }
+            for (int i = 3; i < elements.Count; i+=4)
+            {
+                list.Add(elements[i]);
+            }return list.ToArray();
+            //throw new NotImplementedException();
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
         {
-            throw new NotImplementedException();
+            
+            if (nums==null||nums.Length == 0)
+            {
+                return false;
+            }
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = 1; j < nums.Length; j++)
+                {
+                    if (nums[i]+nums[j]==targetNumber && i!=j)
+                    {
+                        return true;
+                    }
+                    
+                }
+                
+            }return false;
+            //throw new NotImplementedException();
         }
     }
 }
