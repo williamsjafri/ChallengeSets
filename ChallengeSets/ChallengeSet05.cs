@@ -75,25 +75,7 @@ namespace ChallengeSets
 
         public string TurnWordsIntoSentence(string[] words)
         {
-           //string sentence = "" ;
-           // if (words==null || words.Length==0)
-           // {
-           //     return "";
-           // }
-           // for (int i = 0; i < words.Length; i++)
-           // {
-           //     if (words[i].Length == 0)
-           //     {
-           //         sentence += "";
-           //     }
-           //     if (i==words.Length-1)
-           //     {
-           //         words[i] += ". ";
-           //     }
-           //     sentence+=$"{words[i]} ";
-           // }return sentence;
-
-            
+                       
             string str = "";
             if (words == null || words.Length < 1)
                 return str;
@@ -109,11 +91,6 @@ namespace ChallengeSets
                 return "";
             }
             return str.TrimEnd() + ".";
-
-
-
-
-
         }
 
         public double[] GetEveryFourthElement(List<double> elements)
@@ -127,7 +104,7 @@ namespace ChallengeSets
             {
                 list.Add(elements[i]);
             }return list.ToArray();
-            //throw new NotImplementedException();
+            
         }
 
         public bool TwoDifferentElementsInArrayCanSumToTargetNumber(int[] nums, int targetNumber)
@@ -149,7 +126,7 @@ namespace ChallengeSets
                 }
                 
             }return false;
-            //throw new NotImplementedException();
+            
         }
     }
 }
