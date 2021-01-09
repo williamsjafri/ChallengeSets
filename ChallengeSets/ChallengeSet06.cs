@@ -52,7 +52,37 @@ namespace ChallengeSets
 
         public int IndexOfLastUniqueLetter(string str)
         {
-            throw new NotImplementedException();
+            int[] arr = new int[str.Length];
+            for (int i = 0; i < str.Length; i++)
+            {
+                
+                
+                for (int j = 0; j < str.Length; j++)
+                {
+                    if (str[i]==str[j])
+                    {
+                        arr[i]++;
+                    }
+                }
+                
+            }
+            for (int i = 0; i < arr.Length; i++)
+            { 
+                for (int j = 0; j < arr.Length; j++)
+                {
+                    if (arr[i]==1 && arr[i] == arr[j] && i<j)
+                    {
+                        return j;
+                    }
+                }
+                if (arr[i] == 1)
+                {
+                    
+                    return i;
+                }
+                
+            }
+            return -1;
         }
 
         public int MaxConsecutiveCount(int[] numbers)
